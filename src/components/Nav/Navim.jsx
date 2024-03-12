@@ -1,10 +1,13 @@
 import React from "react";
-import { SafeAreaView,Text } from "react-native";
+import { Image, SafeAreaView,Text,View } from "react-native";
 
 const Navim =()=>{
     return(
         <SafeAreaView>
-            <Text>Navim</Text>
+            <View>
+                <Image source={require("../../../Image/logo.png")}/>
+            </View>
+           
         </SafeAreaView>
     )
 }
