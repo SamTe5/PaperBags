@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import Hot from './pages/Hot';
 
 const Stack=createNativeStackNavigator()
 const Tab=createBottomTabNavigator()
@@ -17,6 +18,14 @@ const HomeStack=()=>{
       <Stack.Screen name="HomeScreen" component={Home}/>
     </Stack.Navigator>
     
+  )
+}
+
+const HotStack=()=>{
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name="HotScreen" component={Hot}/>
+    </Stack.Navigator>
   )
 }
 
@@ -37,6 +46,7 @@ const App=()=> {
     <NavigationContainer>
       <Tab.Navigator initialRouteName="Home" screenOptions={{headerShown:false}}>
         <Tab.Screen name="Home" component={HomeStack}/>
+        <Tab.Screen name='Hot' component={HotStack}/>
         <Tab.Screen name="Profile" component={ProfileStack}/>
       </Tab.Navigator>
     </NavigationContainer>
