@@ -8,13 +8,14 @@ import Profile from './pages/Profile';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import Hot from './pages/Hot';
+import Navim from './components/Nav/Navim';
 
 const Stack=createNativeStackNavigator()
 const Tab=createBottomTabNavigator()
 
 const HomeStack=()=>{
   return(
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="HomeScreen" component={Home}/>
     </Stack.Navigator>
     
@@ -23,7 +24,7 @@ const HomeStack=()=>{
 
 const HotStack=()=>{
   return(
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="HotScreen" component={Hot}/>
     </Stack.Navigator>
   )
@@ -31,7 +32,7 @@ const HotStack=()=>{
 
 const ProfileStack=()=>{
   return(
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="ProfileScreen" component={Profile}/>
     </Stack.Navigator>
     
@@ -44,6 +45,7 @@ const App=()=> {
   
   return (
     <NavigationContainer>
+      <Navim/>
       <Tab.Navigator initialRouteName="Home" screenOptions={{headerShown:false}}>
         <Tab.Screen name="Home" component={HomeStack}/>
         <Tab.Screen name='Hot' component={HotStack}/>
