@@ -14,7 +14,7 @@ const Tab=createBottomTabNavigator()
 const HomeStack=()=>{
   return(
     <Stack.Navigator>
-      <Stack.Screen name={HomeScreen} component={Home}/>
+      <Stack.Screen name="HomeScreen" component={Home}/>
     </Stack.Navigator>
     
   )
@@ -23,7 +23,7 @@ const HomeStack=()=>{
 const ProfileStack=()=>{
   return(
     <Stack.Navigator>
-      <Stack.Screen name={ProfileScreen} component={Profile}/>
+      <Stack.Screen name="ProfileScreen" component={Profile}/>
     </Stack.Navigator>
     
   )

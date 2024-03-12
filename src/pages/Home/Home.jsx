@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaView,Text } from "react-native";
 
-const Home =()=>{
+const Home =({navigation})=>{
     return(
         <SafeAreaView>
             <Text>
