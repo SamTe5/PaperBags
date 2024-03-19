@@ -5,9 +5,8 @@ const Navim =()=>{
     return(
         <SafeAreaView>
             <View>
-                <Image source={require("../../../Image/logo.png")}/>
-            </View>
-           
+                <Image source={require("../../../Image/secret.png")}/>
+            </View>           
         </SafeAreaView>
     )
 }
