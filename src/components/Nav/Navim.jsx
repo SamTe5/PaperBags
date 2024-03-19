@@ -7,12 +7,12 @@ const Navim =()=>{
         <SafeAreaView style={styles.container}>
             <View style={styles.general}>
                 <View style={styles.logo}>
-                
+                    <Image style={styles.logoImg} source={require("../../../Image/logo.png")}/>
                 </View>
                 <View style={styles.note}>
     
                 </View>
-                <View>
+                <View style={styles.imgContainer}>
                     <Image style={styles.imgMesaj} source={require("../../../Image/secret.png")}/>
                 </View>
             </View>
