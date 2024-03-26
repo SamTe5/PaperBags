@@ -50,34 +50,25 @@ const App=()=> {
         <Tab.Screen name="Home" component={HomeStack}
         options={{
           tabBarIcon:({focused,color,size})=>(
-            <Image source={ 
-              focused
-              ? require("../Image/home.png")
-              :require("../Image/home.png")
-            }
-            style={{ width: 25, height: 25 }}/>
+            <Image source={require("../Image/home.png")}
+            style={focused? { width: 25, height: 25 }:
+            { width: 25, height: 25,tintColor: 'gray' }}/>
           )
         }}/>
         <Tab.Screen name='Hot' component={HotStack}
          options={{
           tabBarIcon:({focused,color,size})=>(
-            <Image source={ 
-              focused
-              ? require("../Image/fire.png")
-              :require("../Image/fire.png")
-            }
-            style={{ width: 25, height: 25 }}/>
+            <Image source={require("../Image/fire.png")}
+            style={focused? { width: 25, height: 25 }:
+            { width: 25, height: 25,tintColor: 'gray' }}/>
           )
         }}/>
         <Tab.Screen name="Profile" component={ProfileStack}
          options={{
           tabBarIcon:({focused,color,size})=>(
-            <Image source={ 
-              focused
-              ? require("../Image/user.png")
-              :require("../Image/user.png")
-            }
-            style={{ width: 25, height: 25 }}/>
+            <Image source={require("../Image/user.png")}
+            style={focused? { width: 25, height: 25 }:
+            { width: 25, height: 25,tintColor: 'gray' }}/>
           )
         }}/>
       </Tab.Navigator>
