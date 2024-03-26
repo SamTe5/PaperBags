@@ -2,7 +2,7 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { SafeAreaView,Text } from 'react-native';
+import { Image, SafeAreaView,Text } from 'react-native';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -47,9 +47,39 @@ const App=()=> {
     <NavigationContainer>
       <Navim/>
       <Tab.Navigator initialRouteName="Home" screenOptions={{headerShown:false}}>
-        <Tab.Screen name="Home" component={HomeStack}/>
-        <Tab.Screen name='Hot' component={HotStack}/>
-        <Tab.Screen name="Profile" component={ProfileStack}/>
+        <Tab.Screen name="Home" component={HomeStack}
+        options={{
+          tabBarIcon:({focused,color,size})=>(
+            <Image source={ 
+              focused
+              ? require("../Image/home.png")
+              :require("../Image/home.png")
+            }
+            style={{ width: 25, height: 25 }}/>
+          )
+        }}/>
+        <Tab.Screen name='Hot' component={HotStack}
+         options={{
+          tabBarIcon:({focused,color,size})=>(
+            <Image source={ 
+              focused
+              ? require("../Image/fire.png")
+              :require("../Image/fire.png")
+            }
+            style={{ width: 25, height: 25 }}/>
+          )
+        }}/>
+        <Tab.Screen name="Profile" component={ProfileStack}
+         options={{
+          tabBarIcon:({focused,color,size})=>(
+            <Image source={ 
+              focused
+              ? require("../Image/user.png")
+              :require("../Image/user.png")
+            }
+            style={{ width: 25, height: 25 }}/>
+          )
+        }}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

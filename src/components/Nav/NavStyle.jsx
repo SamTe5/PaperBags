@@ -20,9 +20,13 @@ const styles=StyleSheet.create({
         backgroundColor:"yellow",
         
     },
-    logo:{
+    logoC:{
         flex:6,
+        justifyContent:"center",       
         
+    },
+    logoText:{
+        fontSize:20,        
     },
     note:{
         flex:1,

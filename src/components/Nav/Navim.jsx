@@ -6,8 +6,8 @@ const Navim =()=>{
     return(
         <SafeAreaView style={styles.container}>
             <View style={styles.general}>
-                <View style={styles.logo}>
-                    <Image style={styles.logoImg} source={require("../../../Image/logo.png")}/>
+                <View style={styles.logoC}>
+                    <Text style={styles.logoText}>PaperBag</Text>
                 </View>
                 <View style={styles.note}>
     
